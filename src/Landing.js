@@ -22,7 +22,7 @@ class Landing extends Component {
     let choice = randomNumber;
     if (choice === 1 )
     {
-      alert("Do the Cheese Diet");
+      
     };
 
   }
@@ -30,15 +30,18 @@ class Landing extends Component {
     return (
       <div class = "app">
         <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet"/>
-        <header class="app-header">
+
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-        <div class="floathead"> Welcome to the Crevice Diet World </div>
+        <div class="floathead">
+          <p>Welcome to the Crevice Diet World </p>
+
         <button class="wheel" onClick={this.wheelClick}>
           What diet should we do today?
         </button>
-        <div class = "yason">
-
+        </div>
+      <div class="content">
+        <div class = "yson">
           <div class="slidewrap">
             <img src="fat.png" class="pika"/>
             <div id="slide">
@@ -55,8 +58,8 @@ class Landing extends Component {
             </div>
           </div>
         </div>
+      </div>
 
-        </header>
         <footer>
           <p>Crevice Co ®</p>
         </footer>

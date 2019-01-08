@@ -78,19 +78,24 @@
     </div>
   </div>
 } */
+.content {
+  margin-top: 50px;
+}
 
 .floathead {
+  z-index: 11;
   justify-content: center;
-  
   width: 100%;
-  height: 100%;
+  background: darkgreen;
   color: yellow;
   text-align: center;
   font-family: 'Indie Flower', cursive;
-  padding-bottom: 15px;
-  padding-top: 15px;
-  border-bottom: solid #D9BB74 10px;
+  font-size: 25px;
+  border-bottom: solid #D9BB74 5px;
   position: fixed;
+  top: 0;
+  left: 0;
+
 }
 
 footer {
@@ -137,6 +142,7 @@ footer {
   font: 30px "Futura";
   color: white;
   width: 60%;
+  z-index: 10;
 }
 
 #slide2 {
@@ -160,6 +166,7 @@ footer {
   justify-content: left;
   padding-bottom: 80px;
   width: 60%;
+
 }
 
 .slidewrap2:hover #slide2 {
@@ -195,14 +202,18 @@ footer {
 .yason {
   background: #054549;
   border-top: solid 10px #D9BB74;
+}
 
+.yson {
+  background: #054549;
+  border-top: solid 10px #D9BB74;
 }
 
 .yaason {
   background: #0BC7B1;
   border-top: solid 10px #D9BB74;
   border-bottom: solid #D9BB74 10px;
-
+  
 }
 
 .wheel {
@@ -212,7 +223,7 @@ footer {
   margin-bottom: 15px;
   border-radius: 12px;
   box-shadow: 5px 8px;
-
+  margin-top: -1000px;
 }
 
 .wheel:hover {

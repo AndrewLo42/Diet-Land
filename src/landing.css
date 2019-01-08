@@ -1,0 +1,223 @@
+/*
+.masonry-layout-panel--small {
+  height: 200px;
+}
+.masonry-layout-panel--medium {
+  height: 300px;
+}
+.masonry-layout-panel--large {
+  height: 400px;
+}
+
+.masonry-layout {
+  column-count: 3;
+  column-gap: 0;
+}
+.masonry-layout-panel {
+  break-inside: avoid;
+  padding: 5px;
+}
+.masonry-layout-panel__content {
+  padding: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.masonry-layout-panel__content--img {
+  max-width: 100%;
+  padding: 100;
+  max-height: 80%;
+}
+
+.masonry-layout-flip {
+  perspective: 1000;
+}
+.masonry-layout-flip:hover .masonry-layout-flip__content {
+  transform: rotateY(180deg);
+}
+.masonry-layout-flip--md {
+  height: 300px;
+}
+.masonry-layout-flip__panel {
+  backface-visibility: hidden;
+  border-radius: 10px;
+  height: 100%;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.masonry-layout-flip__panel--front {
+  transform: rotateY(0deg);
+  z-index: 2;
+}
+.masonry-layout-flip__panel--back {
+  transform: rotateY(180deg);
+}
+.masonry-layout-flip__content {
+  height: 100%;
+  overflow: visible;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: 0.25s;
+}
+
+.masonry-layout-flip--medium {
+  height: 300px;
+  text-align: center;
+  color: white;
+  font-size: 30px;
+
+  Code for the masonry
+  <div class="masonry-layout-panel masonry-layout-flip--medium masonry-layout-flip">
+    <div class="masonry-layout-panel__content masonry-layout-flip__content">
+      <img src="fat.png" class="masonry-layout-flip__panel masonry-layout-flip__panel--front masonry-layout-flip__panel--img pika"/>
+      <div class="masonry-layout-flip__panel masonry-layout-flip__panel--back">
+        <p>You're waaaaaay too fat</p>
+      </div>
+    </div>
+  </div>
+} */
+
+.floathead {
+  justify-content: center;
+  
+  width: 100%;
+  height: 100%;
+  color: yellow;
+  text-align: center;
+  font-family: 'Indie Flower', cursive;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  border-bottom: solid #D9BB74 10px;
+  position: fixed;
+}
+
+footer {
+  width: 100%;
+  height: 10%;
+  background: darkgreen;
+  border-top: solid #D9BB74 2px;
+  justify-content: center;
+  text-align: center;
+  font: 10px "Comic Sans MS";
+  color: yellow;
+}
+
+.slidewrap {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 50%;
+  margin: 0;
+  padding: 0;
+  border: solid black 1px;
+  padding-top: 100px;
+}
+
+.slidewrap2 {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 50%;
+  margin: 0;
+  padding: 0;
+  border: solid black 1px;
+  padding-top: 100px;
+}
+
+#slide {
+  position: absolute;
+  bottom: 100%;
+  width: auto;
+  height: auto;
+  background: #054549;
+  transition: .5s ease;
+  overflow: hidden;
+  font: 30px "Futura";
+  color: white;
+  width: 60%;
+}
+
+#slide2 {
+  position: absolute;
+  bottom: 100%;
+  width: auto;
+  height: auto;
+  background: #0BC7B1;
+  transition: .5s ease;
+  overflow: hidden;
+  font: 70px "Century Gothic";
+  color: white;
+  width: 60%;
+}
+
+.slidewrap:hover #slide {
+  transition: 1s;
+  bottom: 0;
+  padding-left: 60px;
+  text-align: left;
+  justify-content: left;
+  padding-bottom: 80px;
+  width: 60%;
+}
+
+.slidewrap2:hover #slide2 {
+  transition: 1s;
+  bottom: 0;
+  padding-left: 60px;
+  text-align: left;
+  justify-content: left;
+  padding-bottom: 80px;
+  width: 60%;
+}
+
+.pika {
+  width: 30%;
+  height: 40vmin;
+  display: flex;
+  float: right;
+}
+
+.app {
+  background: teal;
+
+}
+
+.app-header {
+  background: teal;
+  color: white;
+  text-align: center;
+  justify-content: center;
+
+  /* border-bottom: 10px solid black; */
+}
+.yason {
+  background: #054549;
+  border-top: solid 10px #D9BB74;
+
+}
+
+.yaason {
+  background: #0BC7B1;
+  border-top: solid 10px #D9BB74;
+  border-bottom: solid #D9BB74 10px;
+
+}
+
+.wheel {
+  position: relative;
+  height: 30px;
+  justify-content: center;
+  margin-bottom: 15px;
+  border-radius: 12px;
+  box-shadow: 5px 8px;
+
+}
+
+.wheel:hover {
+  color: #0BC7B1;
+  background: ;
+  box-shadow: 5px 5px;
+  font-style: italic;
+}

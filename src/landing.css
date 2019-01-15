@@ -79,7 +79,7 @@
   </div>
 } */
 .content {
-  margin-top: 50px;
+  margin-top: 100px;
 }
 
 .floathead {
@@ -91,11 +91,11 @@
   text-align: center;
   font-family: 'Indie Flower', cursive;
   font-size: 25px;
-  border-bottom: solid #D9BB74 5px;
+  border-bottom: solid #D9BB74 7px;
   position: fixed;
   top: 0;
   left: 0;
-
+  padding: 0px;
 }
 
 footer {
@@ -153,9 +153,10 @@ footer {
   background: #0BC7B1;
   transition: .5s ease;
   overflow: hidden;
-  font: 70px "Century Gothic";
+  font: 30px "Futura";
   color: white;
   width: 60%;
+  z-index: 10;
 }
 
 .slidewrap:hover #slide {
@@ -175,15 +176,22 @@ footer {
   padding-left: 60px;
   text-align: left;
   justify-content: left;
-  padding-bottom: 80px;
+  padding-bottom: 150px;
   width: 60%;
 }
 
 .pika {
   width: 30%;
-  height: 40vmin;
+  height: auto;
   display: flex;
   float: right;
+}
+
+.cheese {
+  float: right;
+  height: auto;
+  display: flex;
+  width: 30%;
 }
 
 .app {
@@ -199,6 +207,11 @@ footer {
 
   /* border-bottom: 10px solid black; */
 }
+.headbutt {
+  height: 18px;
+  overflow: scroll;
+}
+
 .yason {
   background: #054549;
   border-top: solid 10px #D9BB74;
@@ -212,8 +225,8 @@ footer {
 .yaason {
   background: #0BC7B1;
   border-top: solid 10px #D9BB74;
-  border-bottom: solid #D9BB74 10px;
-  
+  border-bottom: solid #D9BB74 5px;
+
 }
 
 .wheel {
@@ -223,7 +236,7 @@ footer {
   margin-bottom: 15px;
   border-radius: 12px;
   box-shadow: 5px 8px;
-  margin-top: -1000px;
+  margin-top: -10px;
 }
 
 .wheel:hover {
@@ -231,4 +244,88 @@ footer {
   background: ;
   box-shadow: 5px 5px;
   font-style: italic;
+  cursor: pointer;
+}
+.wheel:active {
+  color: darkgreen;
+  box-shadow: 5px 5px;
+  font-style: italic;
+}
+
+.popup {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 11;
+
+}
+
+.popup_inner {
+  position: absolute;
+  left: 15%;
+  right: 15%;
+  top: 15%;
+  bottom: 15%;
+  margin: auto;
+  background: #D9BB74;
+  text-align: center;
+  border-radius: 24px;
+}
+
+#popimg {
+  width: 50%;
+  position: relative;
+}
+
+.dropdown {
+  float: right;
+  position: absolute;
+  display: inline-block;
+  top: 10%;
+  right: 10%;
+  text-align: center;
+  border-bottom: 1px solid
+}
+
+.drop_content {
+  display: none;
+  position: absolute;
+  min-width: 80px;
+  min-height: 5px;
+  box-shadow: 0px 8px 10px 0px rgba(0,0,0,0.3);
+  z-index: 1;
+  color: white;
+
+}
+
+.drop_content li {
+  text-decoration: none;
+  display: inherit;
+  text-align: center;
+  border: .1px solid gray;
+  border-top: 0px;
+  padding: 3px;
+  background: orange;
+
+}
+
+.drop_content li:hover {
+  color: cyan;
+  cursor: pointer;
+  border: .1px solid #D9BB74;
+}
+
+.dropdown:hover .drop_content {
+  display: block;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }

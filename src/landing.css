@@ -282,6 +282,25 @@ footer {
   position: relative;
 }
 
+.popinfo {
+  position: relative;
+  display: block;
+  margin: auto;
+  text-decoration: none;
+  border: 1px solid black ;
+  width: 50%;
+  box-shadow: 3px 5px black;
+}
+
+.popinfo:hover {
+  background: cyan;
+  color: #0BC7B1;
+  box-shadow: 3px 5px #0BC7B1;
+}
+.popinfo:visited {
+  color: inherit;
+}
+
 .dropdown {
   float: right;
   position: absolute;
@@ -289,7 +308,8 @@ footer {
   top: 10%;
   right: 10%;
   text-align: center;
-  border-bottom: 1px solid
+  border-bottom: 1px solid orange;
+  color: orange;
 }
 
 .drop_content {
@@ -329,3 +349,5 @@ ul {
   margin: 0;
   padding: 0;
 }
+
+/*  A-7, Cmaj7, Fmaj7, F6 */

@@ -14,19 +14,37 @@ class Landing extends Component {
       isToggleOn: false,
       ketoInfo: false,
       veganInfo: false,
+      atkinsInfo: false,
+      rawInfo: false,
+      juiceInfo: false,
+      fatInfo: false,
 
       ketoWheel: false,
+      veganWheel: false,
+      rawWheel: false,
+      atkinsWheel: false,
+      juiceWheel: false,
+      fatwheel: false,
     };
     this.wheelClick = this.wheelClick.bind(this);
     this.wheelExit = this.wheelExit.bind(this);
     this.ketoClick = this.ketoClick.bind(this);
     this.veganClick = this.veganClick.bind(this);
+    this.rawClick = this.rawClick.bind(this);
+    this.atkinsClick = this.atkinsClick.bind(this);
+    this.juiceClick = this.juiceClick.bind(this);
+    this.fatClick = this.fatClick.bind(this);
+
     this.toVeg = this.toVeg.bind(this);
     this.toKeto = this.toKeto.bind(this);
+    this.toRaw = this.toRaw.bind(this);
+    this.toAtkins = this.toAtkins.bind(this);
+    this.toJuice = this.toJuice.bind(this);
+    this.toFat = this.toFat.bind(this);
   }
 
   wheelClick() {
-    var maxNumber = 3;
+    var maxNumber = 6;
     var randomNumber = Math.floor((Math.random() * maxNumber) + 1);
     let choice = randomNumber;
     if (choice === 1 )
@@ -34,14 +52,68 @@ class Landing extends Component {
       this.setState({
         ketoWheel: !this.state.ketoWheel
       });
+    }
+    else if (choice === 2)
+    {
+      this.setState({
+        veganWheel: !this.state.veganWheel
+      })
+    }
+    else if (choice === 3)
+    {
+      this.setState({
+        rawWheel: !this.state.rawWheel
+      })
+    }
+    else if (choice === 4)
+    {
+      this.setState({
+        atkinsWheel: !this.state.atkinsWheel
+      })
+    }
+    else if (choice === 5)
+    {
+      this.setState({
+        juiceWheel: !this.state.juiceWheel
+      })
+    }
+    else if (choice === 6)
+    {
+      this.setState({
+        fatWheel: !this.state.fatWheel
+      })
     };
-
   }
 
   wheelExit() {
     if (this.state.ketoWheel === true) {
       this.setState({
         ketoWheel: !this.state.ketoWheel
+      });
+    }
+    if (this.state.veganWheel === true) {
+      this.setState({
+        veganWheel: !this.state.veganWheel
+      });
+    }
+    if (this.state.rawWheel === true) {
+      this.setState({
+        rawWheel: !this.state.rawWheel
+      });
+    }
+    if (this.state.atkinsWheel === true) {
+      this.setState({
+        atkinsWheel: !this.state.atkinsWheel
+      });
+    }
+    if (this.state.juiceWheel === true) {
+      this.setState({
+        juiceWheel: !this.state.juiceWheel
+      });
+    }
+    if (this.state.fatWheel === true) {
+      this.setState({
+        fatWheel: !this.state.fatWheel
       });
     }
   }
@@ -56,6 +128,34 @@ class Landing extends Component {
   veganClick() {
     this.setState({
       veganInfo: !this.state.veganInfo
+
+    });
+  }
+
+  rawClick() {
+    this.setState({
+      rawInfo: !this.state.rawInfo
+
+    });
+  }
+
+  atkinsClick() {
+    this.setState({
+      atkinsInfo: !this.state.atkinsInfo
+
+    });
+  }
+
+  juiceClick() {
+    this.setState({
+      juiceInfo: !this.state.juiceInfo
+
+    });
+  }
+
+  fatClick() {
+    this.setState({
+      fatInfo: !this.state.fatInfo
 
     });
   }
@@ -75,6 +175,26 @@ class Landing extends Component {
     jump.scrollIntoView({block: "start", behavior: 'smooth'});
   }
 
+  toRaw(){
+    var jump = document.getElementById("rawSlide");
+    jump.scrollIntoView({block: "start", behavior: "smooth"});
+  }
+
+  toAtkins(){
+    var jump = document.getElementById("atkinsSlide");
+    jump.scrollIntoView({block: "start", behavior: "smooth"});
+  }
+
+  toJuice(){
+    var jump = document.getElementById("juiceSlide");
+    jump.scrollIntoView({block: "start", behavior: "smooth"});
+  }
+
+  toFat(){
+    var jump = document.getElementById("fatSlide");
+    jump.scrollIntoView({block: "start", behavior: "smooth"});
+  }
+
   render() {
     return (
       <div class = "app">
@@ -91,7 +211,10 @@ class Landing extends Component {
               <ul>
           <li onClick={this.toKeto}> Keto </li>
           <li onClick={this.toVeg} > Vegetarian </li>
-          <li>Nyes</li>
+          <li onClick={this.toRaw}> Raw Food </li>
+          <li onClick={this.toAtkins}> Atkins </li>
+          <li onClick={this.toJuice}> Juicing </li>
+          <li onClick={this.toFat}> Treat yo self</li>
               </ul>
             </div>
           </div>
@@ -102,11 +225,48 @@ class Landing extends Component {
         {this.state.ketoWheel ?
           <Popup
             text='Do the Keto diet today'
+            name="Keto"
+            closePopup={this.wheelExit.bind(this)}
+            />
+          : null
+        }
+        {this.state.veganWheel ?
+          <Popup
+            text='Do the Vegan diet today'
+            closePopup={this.wheelExit.bind(this)}
+            />
+          : null
+        }
+        {this.state.rawWheel ?
+          <Popup
+            text='Do the Raw Food diet today'
+            closePopup={this.wheelExit.bind(this)}
+            />
+          : null
+        }
+        {this.state.atkinsWheel ?
+          <Popup
+            text='Do the Atkins diet today'
+            closePopup={this.wheelExit.bind(this)}
+            />
+          : null
+        }
+        {this.state.juiceWheel ?
+          <Popup
+            text='Do the Juicer diet today'
+            closePopup={this.wheelExit.bind(this)}
+            />
+          : null
+        }
+        {this.state.fatWheel ?
+          <Popup
+            text='CHEAT DAY'
             closePopup={this.wheelExit.bind(this)}
             />
           : null
         }
         </div>
+
 
       <div class="content">
 
@@ -119,8 +279,10 @@ class Landing extends Component {
             <div>
             {this.state.ketoInfo ?
               <Popup
-                text='Boots'
-                content='wow.png'
+                text='keto'
+                name='Keto'
+                content='ketofoods.jpg'
+                contentLink="https://www.healthline.com/nutrition/ketogenic-diet-foods"
                 closePopup={this.ketoClick.bind(this)}
               />
               : null
@@ -196,7 +358,8 @@ class Landing extends Component {
           <img src="fat.png" class="pika" onClick={this.juiceClick}/>
           <div id="slide">
             <p>
-
+              Juice fasting is also referred to as juice cleansing. Many people who undergo a juice fast aren’t just trying to lose weight, they’re also looking to beef up the nutrients in their bodies.
+              Juicing is a process that extracts the juices from whole fruits and vegetables. What’s missing from juice is the fiber that’s found in the pulp.
             </p>
           </div>
           <div>
@@ -256,6 +419,9 @@ class Popup extends Component {
             {this.props.text}
           </h1>
           <img src={this.props.content} id="popimg"></img>
+          <a className="popinfo" href={this.props.contentLink} target="_blank">
+            Learn more about {this.props.name}
+          </a>
         </div>
       </div>
     );
